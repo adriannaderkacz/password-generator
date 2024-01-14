@@ -179,3 +179,9 @@ function getRandom(arr) {
 
     return generatedPassword;
 };
+
+//Added a function to generate password based on user's input
+function generatedPassword() {
+    getPasswordOptions();
+    return getRandom();
+};

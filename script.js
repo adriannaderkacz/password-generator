@@ -92,3 +92,72 @@ var lowerCasedCharacters = [
     'y',
     'z'
 ];
+
+var passwordLength;
+var options;
+
+//Added a function to request user input for password options
+function getPasswordOptions() {
+    passwordLength = prompt("How many characters would you like your password to contain?");
+    console.log(passwordLength);
+
+    if (passwordLength < 10) {
+        alert("Please ensure your password is at least 10 characters long.");
+    } else if (passwordLength > 50) {
+        alert("Please limit your password to a maximum of 50 characters.");
+    } else {
+        var specialOption = confirm("Would you like to include special characters in your password?");
+        // console.log("Special characters YES");
+        var numericOption = confirm("Would you like to include numeric characters in your password?");
+        // console.log("Numeric characters YES");
+        var lowerCaseOption = confirm("Would you like to include lower case characters in your password?");
+        // console.log("Lower case characters YES");
+        var upperCaseOption = confirm("Would you like to include upper case characters in your password?");
+        // console.log("Upper case characters YES");
+    };
+//If user doesn't select any of the options
+//If user selects all of the options
+//If user selects only three options
+//If user selects only two options
+//If user selects only one option
+if (!specialOption && !numericOption && !lowerCaseOption && !upperCaseOption) {
+    alert("Please select a criteria");
+} else if (specialOption && numericOption && lowerCaseOption && upperCaseOption) {
+    options = specialCharacters.concat(numericCharacters, lowerCasedCharacters, upperCasedCharacters);
+    console.log(options);
+} else if (specialOption && numericOption && lowerCaseOption) {
+    options = options = specialCharacters.concat(numericCharacters, lowerCasedCharacters);
+    console.log(options);
+} else if (specialOption && numericOption && upperCaseOption) {
+    options = specialCharacters.concat(numericCharacters, upperCasedCharacters);
+    console.log(options);
+} else if (specialOption && lowerCaseOption && upperCaseOption) {
+    options = specialCharacters.concat(lowerCasedCharacters, upperCasedCharacters);
+    console.log(options);
+} else if (numericOption && lowerCaseOption & upperCaseOption) {
+    options = numericCharacters.concat(lowerCasedCharacters, upperCasedCharacters);
+    console.log(options);
+} else if (specialOption && numericOption) {
+    options = specialCharacters.concat(numericCharacters);
+    console.log(options);
+} else if (specialOption && lowerCaseOption) {
+    options = specialCharacters.concat(lowerCasedCharacters);
+} else if (specialOption && upperCaseOption) {
+    options = specialCharacters.concat(upperCasedCharacters);
+} else if (numericOption && lowerCaseOption) {
+    options = numericCharacters.concat(lowerCasedCharacters);
+} else if (numericOption && upperCaseOption) {
+    options = numericCharacters.concat(upperCasedCharacters);
+} else if (lowerCaseOption && upperCaseOption) {
+    options = lowerCasedCharacters.concat(upperCasedCharacters);
+} else if (specialOption) {
+    options = specialCharacters;
+} else if (numericOption) {
+    options = numericCharacters;
+} else if (lowerCaseOption) {
+    options = lowerCasedCharacters;
+} else if (upperCaseOption) {
+    options = upperCasedCharacters;
+};
+getRandom();
+};

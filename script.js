@@ -161,3 +161,21 @@ if (!specialOption && !numericOption && !lowerCaseOption && !upperCaseOption) {
 };
 getRandom();
 };
+
+//Added a function to retrieve a random element from an array
+function getRandom(arr) {
+    var storePassword = [];
+
+    for (var i = 0; i < passwordLength; i++) {
+        // var randomSpecial = specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
+        // var randomNumeric = numericCharacters[Math.floor(Math.random() * numericCharacters.length)];
+        // var randomLowerCased = lowerCasedCharacters[Math.floor(Math.random() * lowerCasedCharacters.length)];
+        // var randomUpperCased = upperCasedCharacters[Math.floor(Math.random() * upperCasedCharacters.length)];
+        var allOptions = options[Math.floor(Math.random() * options.length)];
+        storePassword.push(allOptions);
+    };
+    var generatedPassword = storePassword.join("");
+    console.log("The password is " + storePassword);
+
+    return generatedPassword;
+};

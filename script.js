@@ -185,3 +185,15 @@ function generatedPassword() {
     getPasswordOptions();
     return getRandom();
 };
+
+//Setting up a button
+var generateBtn = document.querySelector('#generate');
+
+function writePassword() {
+    var password = generatedPassword();
+    var passwordText = document.querySelector('#password');
+    
+    passwordText.value = password;
+}
+
+generateBtn.addEventListener('click', writePassword);

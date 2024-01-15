@@ -19,7 +19,11 @@ N/A
 ## Page
 https://adriannaderkacz.github.io/password-generator/
 
-[Add images here]
+<img width="1137" alt="Screenshot 2024-01-15 at 00 53 05" src="https://github.com/adriannaderkacz/password-generator/assets/92231751/010b6de7-5884-4c75-b41c-58ef81bda1d1">
+
+<img width="924" alt="Screenshot 2024-01-15 at 00 53 21" src="https://github.com/adriannaderkacz/password-generator/assets/92231751/f42a7993-4094-46c3-9da3-c3ea52253d6e">
+
+<img width="923" alt="Screenshot 2024-01-15 at 00 53 59" src="https://github.com/adriannaderkacz/password-generator/assets/92231751/5cee4ac8-61f8-4e46-9cbb-0ad0a58475b3">
 
 ## Usage
 Using this password generator is straightforward. Here's how you can generate a custom password:
